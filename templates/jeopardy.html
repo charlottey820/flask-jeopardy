@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block title %}random_clue{% endblock title%}
 {% block content %}
-{{data["output"]}}
+
+{{data["output"][0]}}
+Your score is {{data["score"]}}
+<form method="POST" action="/button">
+  <button type="submit" class="btn btn-primary">Give me another question</button>
+</form>
+
 {% endblock content%}

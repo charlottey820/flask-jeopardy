@@ -2,6 +2,7 @@
 {% block title %}Index{% endblock title%}
 
 {% block content %}
+This question is worth {{data["value"]}}<br>
 {{data["question"]}}
 <br>
 <form method="POST" action="/jeopardy">

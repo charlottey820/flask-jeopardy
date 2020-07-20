@@ -18,12 +18,12 @@ def match_clue(user_input, answer):
     #     print("Congratulations, that is correct!")
     # else:
     #     print("Sorry, the correct answer was: What is " + response[random_question_number]["answer"]+"?")
-    if user_input.capitalize().strip("?,.!") == answer.capitalize().strip("?,.!"):
+    if user_input.lower().strip(" ?,.!-:\'\"$") == answer.lower().strip(" ?,.!-:\'\"$"):
         # print("Congratulations, that is correct!")
-        return "Congratulations, that is correct!"
+        return ["Congratulations, that is correct!",True]
     else:
         # print("Sorry, the correct answer was: What is " + response[random_question_number]["answer"]+"?")
-        return "Sorry, the correct answer was: What is " + answer+"?"
+        return ["Sorry, the correct answer was: What is " + answer+"?",False]
 
 # user_continue = True
 # user_input_valid = False
