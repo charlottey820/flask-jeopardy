@@ -2,5 +2,13 @@
 {% block title %}Index{% endblock title%}
 
 {% block content %}
-This is stuff
+{{data["question"]}}
+<br>
+<form method="POST" action="/jeopardy">
+  <div class="form-group">
+    <label for="answer">What is...</label>
+    <input class="form-control" name="answer">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 {% endblock content%}
